@@ -1,6 +1,6 @@
-﻿namespace FielApi.core.entities
+﻿namespace FielApi.Infrastructure.persistance
 {
-    public class Buyer
+    public class BuyerModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
