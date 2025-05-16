@@ -482,3 +482,9 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Postegres
+*.containers
+*.containers/fiel-db/postmaster.pid
+*.containers/fiel-db/postmaster.opts
+*.containers/fiel-db/base/**/PG_VERSION

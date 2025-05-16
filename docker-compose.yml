@@ -1,0 +1,26 @@
+services:
+  fielapi:
+    image: ${DOCKER_REGISTRY-}fielapi
+    container_name: fiel.api
+    build:
+      context: .
+      dockerfile: FielApi/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    
+  fiel-database:
+    image: postgres:latest  
+    container_name: fiel-database
+    environment:
+      - POSTGRES_DB=Fclsiel
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+    volumes:
+      - ./.containers/fiel-db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+networks:
+  fiel-network:
+    driver: bridge

@@ -9,11 +9,9 @@ namespace FielApi.Infrastructure.persistance.data
         {
             builder.ToTable("Buyer");
 
-            builder.ToTable("Buyer");
-
             builder.HasKey(x => x.Id);
             builder.HasMany<TicketOrderModel>().WithOne(b => b.Buyer)
-                .HasForeignKey()
+                .HasForeignKey(t => t.BuyerId)
                 .HasConstraintName("FK_TicketOrders_Buyers_BuyerId")
                 .OnDelete(DeleteBehavior.Restrict);
         }

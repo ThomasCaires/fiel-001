@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FielApi.Infrastructure.persistance.data
 {
-    public class SectorMap
+    public class SectorMap : IEntityTypeConfiguration<SectorModel>
     {
         public void Configure(EntityTypeBuilder<SectorModel> builder)
         {

@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FielApi.Infrastructure.persistance.data
 {
-    public class TicketOrderMap
+    public class TicketOrderMap : IEntityTypeConfiguration<TicketOrderModel>
     {
         public void Configure(EntityTypeBuilder<TicketOrderModel> builder)
         {
-            builder.ToTable("TicketOrder");
+            builder.ToTable("TicketOrders");
 
             builder.HasKey(i => i.Id);
         }

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FielApi.Infrastructure.persistance.data
 {
-    public class PositionMap
+    public class PositionMap : IEntityTypeConfiguration<PositionModel>
     {
         public void Configure(EntityTypeBuilder<PositionModel> builder)
         {
